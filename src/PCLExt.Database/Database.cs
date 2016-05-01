@@ -14,14 +14,23 @@ You should reference the PCLExt.Database NuGet package from your main applicatio
 
         public static BaseDatabase Create(string path, DatabaseType type)
         {
-#if DESKTOP || ANDROID || __IOS__ || MAC
+#if DESKTOP || MAC
             switch (type)
             {
                 case DatabaseType.SQLiteDatabase:
-                    return new SQLiteDatabase(path);
+                    return new SQLiteDatabase().Create(path);
 
                 case DatabaseType.FileDBDatabase:
-                    return new FileDBDatabase(path);
+                    return new FileDBDatabase().Create(path);
+            }
+#elif ANDROID || __IOS__
+            switch (type)
+            {
+                case DatabaseType.SQLiteDatabase:
+                    return new SQLiteDatabase().Create(path);
+
+                default:
+                    return new SQLiteDatabase().Create(path);
             }
 #endif
 

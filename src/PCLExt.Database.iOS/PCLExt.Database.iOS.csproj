@@ -48,6 +48,9 @@
     <Compile Include="..\PCLExt.Database.Desktop\SQLiteDatabase.cs">
       <Link>SQLiteDatabase.cs</Link>
     </Compile>
+    <Compile Include="..\PCLExt.Database\Database.cs">
+      <Link>Database.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLite.cs" />
     <Compile Include="SQLiteAsync.cs" />
