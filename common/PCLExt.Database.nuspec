@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>PCLExt.Database</id>
-        <version>1.0.1</version>
+        <version>1.0.3</version>
         <title>PCL Extension - Database API</title>
         <authors>Aragas</authors>
         <owners>Aragas</owners>
@@ -14,12 +14,9 @@
         <summary>PCL Extension provides a database implementation for PCL platforms</summary>
         <tags>database sqlite filedb portable pcl android mac ios xamarin monoandroid monotouch</tags>
         <dependencies>
-            <group />
-            <group targetFramework=".NETFramework4.5" />
-            <group targetFramework="Windows8.0" />
-            <group targetFramework="MonoAndroid0.0" />
-            <group targetFramework="Xamarin iOS0.0" />
-            <group targetFramework=".NETPortable0.0-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac" />
+            <group targetFramework=".NETFramework4.5">
+                <dependency id="FileDb.NET" version="6.1.0" />
+            </group>
         </dependencies>
     </metadata>
     <files>
