@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>PCLExt.Database</id>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
         <title>PCL Extension - Database API</title>
         <authors>Aragas</authors>
         <owners>Aragas</owners>
@@ -24,6 +24,10 @@
         <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.xml" target="lib\monoandroid\PCLExt.Database.Abstractions.xml" />
         <file src="..\src\PCLExt.Database.Android\bin\Release\PCLExt.Database.dll" target="lib\monoandroid\PCLExt.Database.dll" />
         <file src="..\src\PCLExt.Database.Android\bin\Release\PCLExt.Database.xml" target="lib\monoandroid\PCLExt.Database.xml" />
+        <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.dll" target="lib\MonoTouch\PCLExt.Database.Abstractions.dll" />
+        <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.xml" target="lib\MonoTouch\PCLExt.Database.Abstractions.xml" />
+        <file src="..\src\PCLExt.Database.iOS\bin\Release\PCLExt.Database.dll" target="lib\MonoTouch\PCLExt.Database.dll" />
+        <file src="..\src\PCLExt.Database.iOS\bin\Release\PCLExt.Database.xml" target="lib\MonoTouch\PCLExt.Database.xml" />
         <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.dll" target="lib\net45\PCLExt.Database.Abstractions.dll" />
         <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.xml" target="lib\net45\PCLExt.Database.Abstractions.xml" />
         <file src="..\src\PCLExt.Database.Desktop\bin\Release\PCLExt.Database.dll" target="lib\net45\PCLExt.Database.dll" />
@@ -32,9 +36,5 @@
         <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.xml" target="lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLExt.Database.Abstractions.xml" />
         <file src="..\src\PCLExt.Database\bin\Release\PCLExt.Database.dll" target="lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLExt.Database.dll" />
         <file src="..\src\PCLExt.Database\bin\Release\PCLExt.Database.xml" target="lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLExt.Database.xml" />
-        <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.dll" target="lib\portable-Xamarin.iOS+Xamarin.Mac\PCLExt.Database.Abstractions.dll" />
-        <file src="..\src\PCLExt.Database.Abstractions\bin\Release\PCLExt.Database.Abstractions.xml" target="lib\portable-Xamarin.iOS+Xamarin.Mac\PCLExt.Database.Abstractions.xml" />
-        <file src="..\src\PCLExt.Database.iOS\bin\Release\PCLExt.Database.dll" target="lib\portable-Xamarin.iOS+Xamarin.Mac\PCLExt.Database.dll" />
-        <file src="..\src\PCLExt.Database.iOS\bin\Release\PCLExt.Database.xml" target="lib\portable-Xamarin.iOS+Xamarin.Mac\PCLExt.Database.xml" />
     </files>
 </package>

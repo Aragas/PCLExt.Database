@@ -35,19 +35,16 @@
     <DocumentationFile>bin\Release\PCLExt.Database.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="..\..\common\CommonAssemblyInfo.cs">
+    <Compile Include="$(SolutionDir)\common\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Database.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PCLExt.Database.Abstractions\PCLExt.Database.Abstractions.csproj">
+    <ProjectReference Include="$(SolutionDir)\src\PCLExt.Database.Abstractions\PCLExt.Database.Abstractions.csproj">
       <Project>{3f8d0494-6ee2-47fe-b263-f09a5ea3d0b3}</Project>
-      <Name>PCLExt.Thread.Abstractions</Name>
+      <Name>PCLExt.Database.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

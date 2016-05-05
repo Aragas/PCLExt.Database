@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-using SQLite;
+using SQLite.Net;
+using SQLite.Net.Interop;
 
 
 namespace PCLExt.Database
@@ -23,7 +24,13 @@ namespace PCLExt.Database
         /// <returns></returns>
         public override BaseDatabase Create(string path)
         {
-            Connection = new SQLiteConnection(path + FileExtension);
+#if DESKTOP || MAC
+            Connection = new SQLiteConnection(new SQLite.Net.Platform.Generic.SQLitePlatformGeneric(), path + FileExtension);
+#elif ANDROID
+            Connection = new SQLiteConnection(new SQLite.Net.Platform.XamarinAndroid.SQLitePlatformAndroid(), path + FileExtension);
+#elif __IOS__
+            Connection = new SQLiteConnection(new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS(), path + FileExtension);
+#endif
 
             return this;
         }
@@ -33,9 +40,9 @@ namespace PCLExt.Database
             var flags = CreateFlags.None;
 
             var prop = typeof(T).GetProperty("Id");
-            if (Attribute.IsDefined(prop, typeof(PrimaryKeyAttribute)))
+            if (Attribute.IsDefined(prop, typeof (PrimaryKeyAttribute)))
                 flags |= CreateFlags.ImplicitPK;
-            if (Attribute.IsDefined(prop, typeof(AutoIncrementAttribute)))
+            if (Attribute.IsDefined(prop, typeof (AutoIncrementAttribute)))
                 flags |= CreateFlags.AutoIncPK;
 
             Connection.CreateTable<T>(flags);
